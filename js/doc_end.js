@@ -1,4 +1,4 @@
-var params = null;
+﻿var params = null;
 chrome.extension.sendMessage({action: 'get'}, function (response) {
     var url = location.href;
     params = response.params;
@@ -156,23 +156,28 @@ chrome.extension.sendMessage({action: 'get'}, function (response) {
     }
 
     //增加媒体ID和推广位ID提示
-    if (url.indexOf('pub.alimama.com/index.htm') > -1) {
+    if (url.indexOf('pub.alimama.com/myunion.htm') > -1) {
         var i = setInterval(function () {
             if($('.site-nav').size() > 0){
                 clearInterval(i);
-                var adzoneInfoUrl = 'http://pub.alimama.com/common/adzone/adzoneManage.json?tab=3&gcid=8';
+                var adzoneInfoUrl = 'http://pub.alimama.com/common/adzone/newSelfAdzone2.json?tag=29&t=1415250236682&_tb_token_=snkWAnAIcpn&_input_charset=utf-8';
                 $.ajax({
                     url: adzoneInfoUrl,
                     type: "get",
                     dataType: "json",
                     success: function (response) {
                         var text = '';
-                        if(response.data && response.data.pagelist){
-                            for(var i=0;i<response.data.pagelist.length;i++){
-                                var item = response.data.pagelist[i];
-                                if(item['name'] == '代购推广'){
-                                    text = '媒体ID:' + item.siteid + ', 推广位ID:' + item.adzoneid;
-                                }
+                        if(response.data && response.data.otherAdzones){
+                            for(var i=0;i<response.data.otherAdzones.length;i++){
+                                var item = response.data.otherAdzones[i];
+                                if(item && item.sub){
+                                    for(var j=0;j<item.sub.length;j++){
+                                        var subitem=item.sub[i];
+                                        if(subitem['name'] == '代购推广'){
+                                            text = '媒体ID:' + item.id + ', 推广位ID:' + subitem.id;
+                                        }
+                                    }
+				}
                             }
                         }
                         if(text == ''){
