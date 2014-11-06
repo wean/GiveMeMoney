@@ -1,0 +1,39 @@
+{
+   "background": {
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "image/icon128.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_globs": [  ],
+      "include_globs": [  ],
+      "js": [ "js/jquery-1.10.1.min.js", "js/common.js", "js/doc_start.js" ],
+      "matches": [ "http://*.taobao.com/*", "http://*.tmall.com/*", "http://*.alimama.com/*", "https://*.taobao.com/*", "https://*.tmall.com/*", "https://*.alimama.com/*" ],
+      "run_at": "document_start"
+   }, {
+      "all_frames": true,
+      "exclude_globs": [  ],
+      "include_globs": [  ],
+      "js": [ "js/doc_end.js" ],
+      "matches": [ "http://*.taobao.com/*", "http://*.tmall.com/*", "http://*.alimama.com/*", "https://*.taobao.com/*", "https://*.tmall.com/*", "https://*.alimama.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "让您轻松成为一名淘宝客,帮您在淘宝省钱+赚钱!",
+   "homepage_url": "http://easytk.com",
+   "icons": {
+      "128": "image/icon128.png",
+      "16": "image/icon16.png",
+      "48": "image/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr2LoTTcxS1fXIll0P3R5xCMFKPAGYg06JrtEj8KenGnbPXI73+s/INHvX/BtNly67Vu2sPyeYr7o0ANv/ZoYiGgDi0U/ouDhPQ4k5kWhiLNi8++CJN9848g4ppV03TL6BnuwE1L+GHacuo53F8z7jyChCjTtrBXG8Rs6ji9ZOsQIDAQAB",
+   "manifest_version": 2,
+   "name": "轻松淘宝客",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "*://*.easytk.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.6.1",
+   "web_accessible_resources": [ "style/style_page.css", "image/icon24.png", "image/icons.png", "page/meiyongjin.html", "page/kaiqiyongjin.html", "page/yikaiqi.html", "manifest.json" ]
+}

@@ -1,0 +1,82 @@
+<div class='easytk_panel' id='easytk_panel' style='display: none;'>
+    <table style="width:100%;">
+        <tr>
+            <td style="width:90px;">
+                <a id='openFanli' href='javascript:void(0);'
+                   class='button_etk123 button2 withoutIcon buttonyellow' classstyle='yellow'
+                   onmousedown='$(this).addClass($(this).attr("classstyle")+"Down");'
+                   onmouseup='$(this).removeClass($(this).attr("classstyle")+"Down");'><span class='buttonText'>开启佣金</span></a>
+            </td>
+            <td style="width:210px;">
+                <iframe id='info123' style="overflow: hidden;width:200px;height: 26px;border: 0;" scrolling='no' src=''></iframe>
+            </td>
+            <td style="text-align: right;">
+                <label id='accountLabel' title='' style="float: right;line-height: 26px;">&nbsp;</label>
+            </td>
+        </tr>
+    </table>
+</div>
+<script>
+    $(function () {
+        // display panel according to settings
+        if (params.hideToolbar == 'true') {
+            $("#easytk_panel").hide();
+        }
+        else {
+            $("#easytk_panel").show();
+        }
+
+        $("#info123").attr('src','http://easytk.com/?c=plugin&f=show_commision_info&url='+encodeURIComponent(location.href));
+        // initialize account name
+        //debugger;
+        if( params.accountName )
+        {
+            $("#accountLabel").attr('title', '帐号已正确配置').html(params.accountName);
+            $('#openFanli').click(function(){
+                //jQuery(this).toDisable();
+                jQuery(this).children('.buttonText').html('正在开启...');
+                clear_temp_params();
+                chrome.extension.sendMessage({action:'set',data:{
+                    item_link:location.href,
+                    processing:true
+                }}, function (response) {
+                    location.href = 'http://pub.alimama.com/index.htm';
+                });
+            });
+        }
+        else{
+            $("#accountLabel").attr('title', '您还未绑定帐号，请先到选项里面配置！').html("?").css({
+                color:"#FF0000",
+                padding:"0 5px",
+                fontWeight:'bold'
+            });
+            var itemId = get_taobao_item_id( location.href );
+            $.ajax({
+                url:'http://www.easytk.com/?c=plugin&f=get_taobaoke_link',
+                type:'post',
+                data:{item_id: itemId},
+                dataType:'json',
+                success:function( response ){
+                    if( response.success == true && response.data.link != '' )
+                    {
+                        $("#openFanli").attr('_href',response.data.link);
+                    }
+                    else
+                    {
+                        $("#openFanli").children('.buttonText').html('无法开启佣金');
+                    }
+                }
+            });
+            $("#openFanli").click(function(){
+                var url = $(this).attr('_href');
+                chrome.extension.sendMessage({action:'set',data:{
+                    processing:true
+                }}, function (response) {
+                    location.href = url;
+                });
+            });
+        }
+
+        load_stat_script();
+    });
+</script>

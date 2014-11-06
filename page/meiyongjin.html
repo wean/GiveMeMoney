@@ -1,0 +1,15 @@
+<div id='easytk_panel' class='easytk_panel' style='display: none;'>
+    <span style="color: #888;line-height: 24px;">该商品没有佣金</span>
+</div>
+<script>
+    $(function () {
+        if (params.hideToolbar == 'true') {
+            $("#easytk_panel").hide();
+        }
+        else {
+            $("#easytk_panel").show();
+        }
+
+        load_stat_script();
+    });
+</script>

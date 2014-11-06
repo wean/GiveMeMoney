@@ -1,0 +1,256 @@
+.easytk_panel{margin-top:10px;padding:10px 10px 10px 34px;border:solid 1px #CCCCCC;background:url('../image/icon24.png') no-repeat 5px 13px;}
+
+.icon1{ width:32px;height:32px;display: block;margin-right: 2px;
+    float: right;}
+.icon1.sina{    background:url('../image/icons.png') no-repeat 0px 0px;}
+.icon1.tweibo{  background:url('../image/icons.png') no-repeat 0px -1760px;}
+.icon1.qzone{  background:url('../image/icons.png') no-repeat 0px -32px;}
+.icon1.copy{  background:url('../image/icons.png') no-repeat 0px -3296px;}
+.button_etk123{position:relative;text-decoration:none;display:inline-block;overflow:hidden;
+    line-height:100%;margin:0;padding:0;color:#FFF;font-size:12px;cursor:pointer;
+    -webkit-transition:all 0.2s ease-in-out;transition:all 0.2s ease-in-out;}
+.button_etk123:hover{ text-decoration:none;}
+.button_etk123:active{ -webkit-box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);  }
+.button_etk123 .buttonText{   display:inline-block;white-space:nowrap;color:#FFF;/*ie7*/cursor:pointer;}
+.button_etk123 .icon{  padding:0 5px 0 0;font-family:fontawesome;font-style:normal;line-height:100%;}
+.button_etk123.withoutIcon .icon{	display:none;}
+.button_etk123.button1{border-radius:4px;border-style:solid;border-width:1px;padding:10px 20px;text-align:center;}
+.button_etk123.button2{padding:6px 18px;border-radius:4px;border-style:solid;border-width:1px;}
+.button_etk123.buttonLeft{ border-top-right-radius:0;border-bottom-right-radius:0; }
+.button_etk123.buttonMiddle{ border-radius:0;border-left:0;}
+.button_etk123.buttonRight{ border-top-left-radius:0;border-bottom-left-radius:0;border-left:0;}
+.button_etk123.bDisabled{ border-color:#eaeaea;background: #fafafa;color:#999;text-shadow:none; }
+.button_etk123.bDisabled .buttonText{ color:#999; }
+.button_etk123.bDisabled:active{ -webkit-box-shadow:none; }
+.button_etk123.buttonblue{ border-color:#2c6287;color:#FFFFFF;text-shadow:#333 1px 1px;
+    background: #489cd3; /* Old browsers */
+    background: -moz-linear-gradient(top,  #489cd3 0%, #3980af 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#489cd3), color-stop(100%,#3980af)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #489cd3 0%,#3980af 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #489cd3 0%,#3980af 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #489cd3 0%,#3980af 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #489cd3 0%,#3980af 100%); /* W3C */
+}
+.button_etk123.buttonblue:hover{ background: #5ca4ce; /* Old browsers */
+    background: -moz-linear-gradient(top,  #5ca4ce 0%, #4282aa 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#5ca4ce), color-stop(100%,#4282aa)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #5ca4ce 0%,#4282aa 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #5ca4ce 0%,#4282aa 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #5ca4ce 0%,#4282aa 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #5ca4ce 0%,#4282aa 100%); /* W3C */
+}
+.button_etk123.buttonblue:hover.blueDown{
+    background: #3980af; /* Old browsers */
+    background: -moz-linear-gradient(top,  #3980af 0%, #489cd3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3980af), color-stop(100%,#489cd3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #3980af 0%,#489cd3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #3980af 0%,#489cd3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #3980af 0%,#489cd3 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #3980af 0%,#489cd3 100%); /* W3C */
+}
+.button_etk123.buttongrey{ border-color:#555;color:#4f4f4f;text-shadow:#FFF 1px 1px;
+
+    background: #ededed; /* Old browsers */
+
+    background-image: -moz-linear-gradient(top,  #ededed 0%, #cfcfcf 100%); /* FF3.6+ */
+
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#cfcfcf)); /* Chrome,Safari4+ */
+
+    background-image: -webkit-linear-gradient(top,  #ededed 0%,#cfcfcf 100%); /* Chrome10+,Safari5.1+ */
+
+    background-image: -o-linear-gradient(top,  #ededed 0%,#cfcfcf 100%); /* Opera 11.10+ */
+
+    background-image: -ms-linear-gradient(top,  #ededed 0%,#cfcfcf 100%); /* IE10+ */
+
+    background-image: linear-gradient(to bottom,  #ededed 0%,#cfcfcf 100%); /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#cfcfcf',GradientType=0 ); /* IE6-9 */
+
+}
+
+.button_etk123.buttongrey:hover{ border-color:#212121;
+
+    background: #e1e1e1; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #e1e1e1 0%, #c1c1c1 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1e1e1), color-stop(100%,#c1c1c1)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #e1e1e1 0%,#c1c1c1 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #e1e1e1 0%,#c1c1c1 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #e1e1e1 0%,#c1c1c1 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #e1e1e1 0%,#c1c1c1 100%); /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e1e1', endColorstr='#c1c1c1',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+.button_etk123.buttongrey:hover.bGreyDown{  background: #c1c1c1; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #c1c1c1 0%, #e1e1e1 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c1c1c1), color-stop(100%,#e1e1e1)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #c1c1c1 0%,#e1e1e1 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #c1c1c1 0%,#e1e1e1 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #c1c1c1 0%,#e1e1e1 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #c1c1c1 0%,#e1e1e1 100%); /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1c1c1', endColorstr='#e1e1e1',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+
+.button_etk123.buttonred{ border-color:#9d0000;color:#FFF;text-shadow:#333 1px 1px;
+
+    background: #d5161d; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #d5161d 0%, #c6070e 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d5161d), color-stop(100%,#c6070e)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #d5161d 0%,#c6070e 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #d5161d 0%,#c6070e 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #d5161d 0%,#c6070e 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #d5161d 0%,#c6070e 100%); /* W3C */
+
+}
+
+.button_etk123.buttonred:hover{
+
+    background: #d33b40; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #d33b40 0%, #c41b21 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d33b40), color-stop(100%,#c41b21)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #d33b40 0%,#c41b21 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #d33b40 0%,#c41b21 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #d33b40 0%,#c41b21 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #d33b40 0%,#c41b21 100%); /* W3C */
+
+}
+
+
+
+.button_etk123.buttonred:hover.redDown{  background: #c6070e; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #c6070e 0%, #d5161d 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c6070e), color-stop(100%,#d5161d)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #c6070e 0%,#d5161d 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #c6070e 0%,#d5161d 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #c6070e 0%,#d5161d 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #c6070e 0%,#d5161d 100%); /* W3C */
+
+}
+
+/******** green button *************/
+
+.button_etk123.buttongreen{ border-color:#2f6d7a;color:#FFF;text-shadow:#666 1px 1px;
+
+    background: #55b1c3; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #55b1c3 0%, #4391a1 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#55b1c3), color-stop(100%,#4391a1)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #55b1c3 0%,#4391a1 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #55b1c3 0%,#4391a1 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #55b1c3 0%,#4391a1 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #55b1c3 0%,#4391a1 100%); /* W3C */
+
+}
+
+.button_etk123.buttongreen:hover{
+
+    background: #66b4c1; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #66b4c1 0%, #4391a1 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66b4c1), color-stop(100%,#4391a1)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #66b4c1 0%,#4391a1 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #66b4c1 0%,#4391a1 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #66b4c1 0%,#4391a1 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #66b4c1 0%,#4391a1 100%); /* W3C */
+
+}
+
+
+
+.button_etk123.buttongreen:hover.greenDown{background: #4391a1; /* Old browsers */
+
+    background: -moz-linear-gradient(top,  #4391a1 0%, #55b1c3 100%); /* FF3.6+ */
+
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4391a1), color-stop(100%,#55b1c3)); /* Chrome,Safari4+ */
+
+    background: -webkit-linear-gradient(top,  #4391a1 0%,#55b1c3 100%); /* Chrome10+,Safari5.1+ */
+
+    background: -o-linear-gradient(top,  #4391a1 0%,#55b1c3 100%); /* Opera 11.10+ */
+
+    background: -ms-linear-gradient(top,  #4391a1 0%,#55b1c3 100%); /* IE10+ */
+
+    background: linear-gradient(to bottom,  #4391a1 0%,#55b1c3 100%); /* W3C */
+
+}
+
+/* yellow button */
+
+.button_etk123.buttonyellow{ border-color:#E05600;
+    background: #ffa042; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffa042 0%, #ff7402 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa042), color-stop(100%,#ff7402)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffa042 0%,#ff7402 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffa042 0%,#ff7402 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffa042 0%,#ff7402 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffa042 0%,#ff7402 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa042', endColorstr='#ff7402',GradientType=0 ); /* IE6-9 */
+}
+.button_etk123.buttonyellow:hover{
+    background: #ffab5e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffab5e 0%, #ff831e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffab5e), color-stop(100%,#ff831e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffab5e 0%,#ff831e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffab5e 0%,#ff831e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffab5e 0%,#ff831e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffab5e 0%,#ff831e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffab5e', endColorstr='#ff831e',GradientType=0 ); /* IE6-9 */
+}
+
+
+
+.button_etk123.buttonyellow:hover.yellowDown{background: #ff831e; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ff831e 0%, #ffab5e 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff831e), color-stop(100%,#ffab5e)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ff831e 0%,#ffab5e 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ff831e 0%,#ffab5e 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ff831e 0%,#ffab5e 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ff831e 0%,#ffab5e 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff831e', endColorstr='#ffab5e',GradientType=0 ); /* IE6-9 */
+}

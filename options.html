@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <link rel="stylesheet" href="style/style.css" type="text/css"/>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/options.js"></script>
+    <style>
+        .b1{padding:4px 18px;}
+        .info1{color:#FF0000;}
+        .inputText{ width: 200px;}
+        .c1 .c1Title{width:90px;float:left;line-height: 25px;}
+        #optionPanel div{line-height:30px;}
+        .c1 div{padding:5px 0px;}
+    </style>
+  </head>
+  <body style=''>
+    <div style='margin:0 auto;width:960px;'>
+        <h1>轻松淘宝客 - 选项配置 (QQ交流群:80469836)
+            <a href='http://easytk.com/?c=main&f=qna' target='_blank' style='margin-left:10px;float:right;'>常见问题</a>
+        </h1>
+        <fieldset class='c1'>
+            <legend style='font-size:20px;padding:10px 0px;'>帐号配置</legend>
+			<h5>绑定帐号<span style="color:red;">(第一次使用请确保已经开通<a target="_blank" href="http://www.alimama.com">阿里妈妈</a>)</span></h5>
+            <div>
+                <label class="c1Title">帐号类型:</label>
+                <input type="radio" id="accountTypetaobao" name="accountType" value="taobao" /><label for="accountTypetaobao">淘宝帐号</label>
+                <input type="radio" id="accountTypealimama" name="accountType" value="alimama" /><label for="accountTypealimama" style="color:#a6a6a6;">阿里妈妈帐号(2014年1月1日起不能再用，详情请看<a href="http://club.alimama.com/read-htm-tid-5545109.html" target="_blank">阿里妈妈升级公告</a>)</label>
+            </div>
+			<div>
+                <label class="c1Title">登录帐号:</label>
+              	<input id='accountName' type="text" class='inputText' />
+            </div>
+            <div>
+                <label class="c1Title">登录密码:</label>
+                <input id='accountPw' type="password" class='inputText' />
+                <label class="label">(可选，如果没有填，每次打开浏览器第一次访问阿里妈妈的时候需要手动输入密码登录)</label>
+            </div>
+            <div>
+                <label class="c1Title">媒体ID:</label>
+                <input id='siteId' type="text" class='inputText' />
+                <label class="label">(要获得媒体ID和推广位ID，请看<a target="_blank" href="http://easytk.com/?c=main&f=config">教程</a>)</label>
+            </div>
+            <div>
+                <label class="c1Title">推广位ID:</label>
+                <input id='adzoneId' type="text" class='inputText' />
+            </div>
+            <div>
+                <label class="c1Title">自动开启佣金:</label>
+                <input type="checkbox" id="autoOpenFanli" name="autoOpenFanli"/><label for="autoOpenFanli">开启</label>
+                <label class="label">&nbsp;&nbsp;(网速慢的不建议开启)</label>
+            </div>
+            <div>
+                <label class="c1Title">隐藏工具条:</label>
+                <input type="checkbox" id="hideToolbar" name="hideToolbar"/><label for="hideToolbar">是</label>
+            </div>
+            <div style="margin-top: 5px;">
+                <label class="c1Title">&nbsp;</label>
+                <button class='button button2 withoutIcon buttongreen' id='saveOptions' type='button'>
+                    <span class='buttonText'>保存</span>
+                </button>
+                <span id='Info1' class='info1' style='margin-left:20px;'>&nbsp;</span>
+            </div>
+        </fieldset>
+    </div>
+  </body>
+</html>

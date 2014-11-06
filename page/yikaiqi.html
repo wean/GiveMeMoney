@@ -1,0 +1,61 @@
+<div class='easytk_panel' id='easytk_panel' style='display: none;'>
+    <a id='copyButton' class='icon1 copy' href='javascript:void(0);'>&nbsp;</a>
+    <a class='icon1 qzone' href="javascript:void(0);" target="_blank">&nbsp;</a>
+    <a class='icon1 tweibo' href="javascript:void(0);" target="_blank">&nbsp;</a>
+    <a class='icon1 sina' href="javascript:void(0);" target="_blank">&nbsp;</a>
+    <span style="color: #888;line-height: 32px;" id='yikaiqiNumber'>已开启佣金</span>
+</div>
+<script>
+    $(function () {
+        if (params.hideToolbar == 'true') {
+            $("#easytk_panel").hide();
+        }
+        else {
+            if(params.commissionRate){
+                $("#yikaiqiNumber").html('已开启佣金' + params.commissionRate + ' (' + params.commission + ')');
+                var itemId = get_taobao_item_id(params.item_link);
+                $.ajax({
+                    url:'http://www.easytk.com/?c=plugin&f=submit_commision',
+                    type:'post',
+                    data:{
+                        item_id: itemId,
+                        commissionRate:params.commissionRate,
+                        commission:params.commission
+                    },
+                    dataType:'json',
+                    success:function( response ){}
+                });
+            }else{
+                $("#yikaiqiNumber").html('已开启佣金');
+            }
+
+            $("#easytk_panel").show();
+        }
+
+        var url = '';
+        if(params.click_url){
+            url = params.click_url;
+        }else if(document.referrer){
+            url = document.referrer;
+        }
+        copyUrl = url;
+        $("#copyButton").click(function () {
+            prompt("请使用Ctrl+c复制推广链接:", copyUrl);
+        });
+        var title = encodeURIComponent($('.tb-detail-hd h3').text());
+        var pic = $('.tb-gallery #J_ZoomHook').attr('src');
+        if(!pic){
+            pic = $('.tb-gallery #J_ImgBooth').attr('src');
+        }
+        var pic = encodeURIComponent(pic);
+        var summary = encodeURIComponent('发现一个好宝贝，分享给大家');
+        url = encodeURIComponent(params.click_url);
+        $('.qzone').attr('href',"http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url="+url+"&title="+title+"&pics="+pic+"&summary="+summary);
+        $('.sina').attr('href',"http://service.weibo.com/share/share.php?title="+summary+" "+title+"&url="+url+"&pic="+pic);
+        $('.tweibo').click(function(){
+            window.open("http://share.v.t.qq.com/index.php?c=share&a=index&title="+title+"&url="+url+"&pic="+pic);
+        });
+
+        load_stat_script();
+    });
+</script>

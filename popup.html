@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css"/>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/popup.js"></script>
+    <style>
+    </style>
+</head>
+<body style='width: 400px;'>
+<div>
+    <h3 style="">轻松淘宝客<a href='options.html' target='_blank' style='float:right;color:#333;font-size:14px;'>选项</a></h3>
+</div>
+<table style="width: 100%;">
+    <tr>
+        <td style="width: 60px;">商品链接</td>
+        <td>
+            <input id='urlTextbox' type="text" class="inputText" style="width:99%;line-height: 22px;" />
+        </td>
+        <td style="width: 40px;">
+            <button class='button button2 withoutIcon buttonorange' id='query1' type='button'>
+                <span class='buttonText'>查询</span>
+            </button>
+        </td>
+    </tr>
+    <tr id='commisionRow' style="display: none;">
+        <td></td>
+        <td>
+            <div id='titleDiv'></div>
+            <iframe id="info1234" style="overflow: hidden;width:200px;height: 26px;border: 0;"
+                    scrolling="no" src=""></iframe></td>
+    </tr>
+    <tr id='buttonRow' style="display: none;">
+        <td style="">&nbsp;</td>
+        <td>
+            <button class='button button2 withoutIcon buttonorange' id='queryButton' type='button'>
+                <span class='buttonText'>开启佣金</span>
+            </button>
+        </td>
+    </tr>
+    <tr class="linkRow">
+        <td style="padding-top: 10px;"><span style="color: #999;">快捷链接:</span></td>
+        <td style="padding-top: 10px;">
+            <a class="bottomLink" href="http://pub.alimama.com/index.htm#!/promo/self/items" target="_blank">自助推广</a>
+            |
+            <a class="bottomLink" href="http://u.alimama.com/union/newreport/taobaokeDetail.htm" target="_blank">返利明细</a>
+            |
+            <a class="bottomLink" href="http://www.alimama.com/account/account.htm" target="_blank">提现</a>
+            |
+            <a class="bottomLink" href="http://vip.taobao.com/vip_home.htm?auto_take=true" target="_blank">每天领取淘金币</a>
+        </td>
+    </tr>
+</table>
+<div style='display:none;' id='HiddenDiv'></div>
+</body>
+</html>
