@@ -1,4 +1,4 @@
-chrome.extension.sendMessage({action: 'get'}, function (response) {
+﻿chrome.extension.sendMessage({action: 'get'}, function (response) {
     var url = location.href;
     var params = response.params;
 
@@ -48,7 +48,7 @@ chrome.extension.sendMessage({action: 'get'}, function (response) {
                         });
                     }else{
                         clear_temp_params();
-                        alert("获取推广链接失败!");
+                        location.href='http://www.alimama.com/member/login.htm?spm=a219t.7473494.1998155389.1.fEur15&forward=http://pub.alimama.com'
                     }
                 }
             });

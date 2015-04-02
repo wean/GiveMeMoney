@@ -49,11 +49,13 @@ chrome.extension.sendMessage({action: 'get'}, function (response) {
     }
 
     //淘宝登录页面
-    if (params.processing == 'true' && url.indexOf("login.taobao.com/member/login.jhtml?style=minisimple&from=alimama") > -1) {
+    if (url.indexOf("http://login.taobao.com") > -1) {
         if (params.accountType == 'taobao') {
-            $('#TPL_username_1').val(params.accountName);
+            
             if (params.accountPw && params.accountPw != "") {
                 var i = setInterval(function () {
+                    if ($('#TPL_username_1').length > 0){
+		    $('#TPL_username_1').val(params.accountName);
                     if ($('#J_SafeLoginCheck')[0].checked) {
                         $('#J_SafeLoginCheck').click();
                     }
@@ -62,6 +64,7 @@ chrome.extension.sendMessage({action: 'get'}, function (response) {
                         $('#TPL_password_1').val(params.accountPw);
                         $('#J_SubmitStatic').click();
                     }
+		    }
                 }, 500);
                 var i2 = setInterval(function () {
                     if ($('#J_Message .error').text() != '') {
